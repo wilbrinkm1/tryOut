@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+<head>
+
+	
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.min.js" charset="utf-8"></script>
+    <script src="stellar.js-master/jquery.stellar.min.js"></script>
+    <script src="stellar.js-master/jquery.stellar.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.7/angular.min.js"></script>
+
+
+<script>
+
+
+
+$(function(){
+     
+    var menu = $('#menu'),
+        pos = menu.offset();
+         
+        $(window).scroll(function(){
+            if($(this).scrollTop() > pos.top+menu.height() && menu.hasClass('default')){
+                menu.fadeOut('fast', function(){
+                    $(this).removeClass('default').addClass('fixed').fadeIn('fast');
+                });
+            } else if($(this).scrollTop() <= pos.top && menu.hasClass('fixed')){
+                menu.fadeOut('fast', function(){
+                    $(this).removeClass('fixed').addClass('default').fadeIn('fast');
+                });
+            }
+        });
+ 
+});
+
+
+
+$(function(){
+	$.stellar({
+		horizontalScrolling: false,
+		verticalOffset: 40
+	});
+});
+
+
+/*	angular.module('onpageNav',[]);
+
+angular.module('onpageNav').controller('onpageNavCtrl', function($scope,$location,$anchorScroll) { 
+
+angular.module('onpageNav')
+	.directive('stellarTry', function () {
+		return {
+			templateUrl: 'stellarTry.html',
+			restrict: 'E',
+			controller: function ($scope,$location,$anchorScroll) {
+
+				$scope.gotoAboutUs = function () {
+					$location.hash('about-us');
+
+					$anchorScroll();
+				};
+			}
+		};
+	});
+
+
+/* }); */
+
+</script>
+
+
+<style>
+
+
+.photo {
+	background-attachment: fixed;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	height: 450px;
+	position: relative;
+}
+
+.topPic {
+	background-image: url(Mica.jpg);
+	width: 100%;
+}
+
+.botPic {
+	background-image: url(IMG_1608.JPG);
+	width: 100%;
+}
+
+.section-heading {
+	width: 100%;
+	text-align: center;
+}
+
+.about-section {
+	width: 100%;
+	height: 400px;
+}
+
+.about-pic-1 {
+	width: 15%;
+	height: 30%;
+}
+
+.about-blurb {
+
+}
+
+.team-section {
+	width: 100%;
+	height: auto;
+}
+
+.team-mate-div {
+	display: inline-block;
+	width: 29%;
+	height: 300px;
+	margin: 0% 2% 0% 2%;
+}
+
+.team-mate-pic {
+	display: block;
+	margin: auto;
+}
+
+.team-mate-content {
+	text-align: center;
+}
+
+
+
+
+body {
+background: #efefef;
+margin: 0;
+padding: 0;
+border: none;
+text-align: center;
+font: normal 13px Verdana, sans-serif;
+color: #222;
+}
+#navi {
+height: 50px;
+margin-top: 50px;
+}
+#menu {
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #426d9c), color-stop(40%, #0f67a1), color-stop(100%, #1384d1));
+background: -moz-linear-gradient(top, #426d9c, #0f67a1, #1384d1);
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+line-height: 50px;
+text-align: center;
+margin: 0 auto;
+padding: 0;
+}
+#content {
+width: 750px;
+margin: 0 auto;
+margin-bottom: 25px;
+padding: 30px 0;
+text-align: left;
+}
+ul {
+padding: 0;
+}
+ul li {
+list-style-type: none;
+display: inline;
+margin-right: 15px;
+}
+ul li a {
+color: #fff;
+text-decoration: none;
+text-shadow: 1px 1px 1px #000;
+padding: 3px 7px;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-transition-property: color, background;
+-webkit-transition-duration: 0.5s, 0.5s;
+}
+ul li a:hover {
+background: #01458e;
+color: #ff0;
+-webkit-transition-property: color, background;
+-webkit-transition-duration: 0.5s, 0.5s;
+}
+.default {
+width: 850px;
+height: 50px;
+box-shadow: 0 5px 20px #888;
+-webkit-box-shadow: 0 5px 20px #888;
+-moz-box-shadow: 0 5px 20px #888;
+}
+.fixed {
+position: fixed;
+top: -5px;
+left: 0;
+width: 100%;
+box-shadow: 0 0 40px #222;
+-webkit-box-shadow: 0 0 40px #222;
+-moz-box-shadow: 0 0 40px #222;
+}
+
+</style>
+
+</head>
+
+
+
+<body ng-app="onpageNav" ng-controller="onpageNavCtrl" style="zoom: 1;">
+
+
+
+<div id="menu" class="default">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Design</a></li>
+<li><a href="#">Tutorials</a></li>
+<li><a href="#">WordPress</a></li>
+</ul>
+</div>
+
+<!--
+<ul style="position: fixed; top: 0px;">
+	<li><a href="#home">Home</a></li>
+	<li><a href="#news">News</a></li>
+	<li><a href="#contact">Contact</a></li>
+	<li><a href="#" ng-click="gotoAboutUs()">About</a></li>
+</ul>
+-->
+
+
+<div class="photo topPic" data-stellar-background-ratio="0.5" style="background-position: 50%;">
+</div>
+
+<div class="about-section" data-stellar-background-ratio="0.5" style="background-position: 50%;">
+	<h2 class="section-heading">About us</h2>
+	<img src="IMG_6836.jpeg" class="about-pic-1">
+	<div class="about-blurb">
+
+	</div>
+</div>
+
+<div class="photo botPic" data-stellar-background-ratio="0.5" style="background-position: 50%;" >
+	<h3 style="text-align: center;">Trying</h3>
+</div>
+
+<div class="team-section">
+	<h1 class="section-heading">The Team</h1>
+	<div class="team-mate-div">
+		<img src="colin.jpg" class="team-mate-pic">
+		<h3 class="team-mate-content">Colin</h3>
+		<p class="team-mate-content">Colin is the owner and manager at Printing Plus. His studies in the printing industry started in 1983 at Stonington High School. After graduation he attended Hall Institute, a one year program in Graphic Arts and Commercial Printing. Towards the end of the year, his instructor offered him a position at his family owned printing company. Colin was honored, and accepted. For the next 3 years, It was all about the business. The experience was invaluable and he will always be grateful. Being homesick brought him back to Westerly, RI and he landed a good job at a medium-large printing company.  The owners invested in him as he floated in all departments over several years. This was a critical learning experience with all aspects of this trade. The opportunity to purchase Printing Plus came in June of 1991. Since than he has followed trends in the industry while constantly reinvesting to stay cutting edge. Changes in this business over his 25 years have been astronomical however, the desire customers have to receive good service, remains unchanged! On a personal note, if I'm not working, I'm probably with my wife and 2 daughters in Stonington or exploring the ocean.</p>
+	</div>
+	<div class="team-mate-div">
+		<img src="jeff.jpg" class="team-mate-pic">
+		<h3 class="team-mate-content">Jeff</h3>
+		<p class="team-mate-content">Jeff is a lifelong resident of the Westerly/Stonington area. He began his commercial printing career as a junior in high school through an occupational training course. After graduation, he was hired on by the same printing company where he had trained. After 5 years of employment there, he moved to a large commercial printer. Jeff was a press operator for 2 years before the opportunity arose to join the Printing Plus team. Jeff has been an integral part of the company as acting Vice President and lead pressman since 1996. In his spare time, he enjoys bass fishing, hunting and the Red Sox. When not at Fenway or in the great outdoors, he’s home with his wife and three wonderful children.
+		</p>
+	</div>
+	<div class="team-mate-div">
+		<img src="derekMarantz.jpg" class="team-mate-pic">
+		<h3 class="team-mate-content">Derek</h3>
+		<p class="team-mate-content">Derek attended the Montserrat College of Art in Beverly Massachusetts for a couple months before realizing that school was not for him. Then after a quick stint as a Pharmacy Tech at a major hospital in Livingston, New Jersey, he started as a Copier Attendant at his father’s family owned print shop. There, Derek received hands on experience with graphic arts software, digital copiers and the runnings of a print shop. This year and a half of experience became even more important when his father retired and his family made the move to the small beach town of Westerly, Rhode Island. Derek wandered into Printing Plus looking for a position as a Copier Attendant. What he found was an open Graphic Designer position. That was April of 2004. Here he is, almost 7 years later, and couldn’t be a better match for this company. He now resides with his wife in Westerly.
+		</p>
+
+	</div>
+		<about-us></about-us>
+</div>
+
+
+
+
+</body>
+</html>
+
+
+
+
