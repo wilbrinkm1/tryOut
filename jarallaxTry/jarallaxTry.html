@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width">
+
+
+
+<!--        <script src="derekPlusJS/jquery.scrolling-parallax.js"></script>
+        <script src="https://code.jquery.com/jquery.js"></script>
+
+ <link rel="stylesheet" type="text/css" href="../michelExerciseWebsite/styles/bootstrapJustContainerMediaQuery.css"> 
+ <link rel="stylesheet" type="text/css" href="../michelExerciseWebsite/styles/navbar.css"> 
+
+
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300|Inika' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
+
+-->
+
+
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="jarallaxJustCopiedPasted.js"></script>
+
+<!-- <script src="bootstrap/js/bootstrap.min.js"></script> 
+-->
+
+<script>
+
+init = function() {
+    var jarallax = new Jarallax();
+        jarallax.addAnimation('.landing-pic, .pic-section1',[{progress:'0%', top:'90%'},{progress:'100%', top:'0%'}]);
+        jarallax.addAnimation('.about-div, .pic-section1',[{progress:'0%', top:'70%'},{progress:'30%', top:'0%'}]);
+ /*       jarallax.addAnimation('.landing-pic, .pic-section1',[{progress:'0%', top:'100%'},{progress:'100%', top:'0%'}]); */
+
+}
+
+
+
+</script>
+
+
+
+<style>
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 992px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: 16px;
+
+}
+
+.col15 {
+    width: 15%;
+}
+
+.col18 {
+    width: 18%;
+}
+
+
+.col20 {
+    width: 20%;
+}
+
+.col100 {
+    width: 100%;
+}
+
+.fixed {
+background-color: white;
+position: fixed;
+height: 50px;
+box-shadow: 0px 15px 40px #222;
+width: 100%;
+-webkit-box-shadow: 0px 15px 40px #222;
+-moz-box-shadow: 0px 15px 40px #222;
+}
+
+.class-tester1 {
+    width: 300px;
+    display: block;
+    background-color: blue;
+    min-height: 100px;
+}
+
+.display-b {
+    display: block;
+}
+
+.display-ib {
+    display: inline-block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/*.logo-center{
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+}
+*/
+
+.spacer {
+    display: block;
+    height: 50px;
+    width: 100%;
+}
+
+.landing-pic {
+    display: block;
+    margin-top: 0px;
+    width: 100%;
+    height: 400px;
+    background-image:url('../mediaTryOut/skulls.png');
+}
+
+.about-div {
+    position: relative;
+    width: 100%;
+    margin-top: 200px;
+    height: 400px;
+    background-color: #C2FFFF;
+    -webkit-box-shadow: 0px 0px 46px 15px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 46px 15px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 46px 15px rgba(0,0,0,0.75);
+}
+
+.pic-section1 {
+    background-image:url('../mediaTryOut/skulls.png');
+    display: block;
+    margin-top: 600px;
+    width: 100%;
+    height: 400px;
+    background-color: #FFCC66;
+    z-index: -1;  
+}
+
+.the-team {
+    width: 100%;
+    height: 400px;
+    background-color: #99FF33;   
+}
+
+.pic-section2 {
+    display: block;
+    width: 100%;
+    height: 400px;
+    background-color: #FFCC66;   
+}
+
+.our-services {
+    width: 100%;
+    height: 400px;
+    background-color: #FF99FF;   
+}
+
+.pic-section3 {
+    display: block;
+    width: 100%;
+    height: 400px;
+    background-color: #FFCC66;   
+}
+
+.contact-us {
+    width: 100%;
+    height: 400px;
+    background-color: #66CCFF;   
+}
+
+.pos-fixed {
+    position: fixed;
+}
+
+</style>
+
+</head>
+<body onload="init()">
+
+
+<!--
+<div id="menu" class="container fixed">
+    <nav class="navbar navbar-default col100" role="navigation">      
+ 
+ Trying to get 5 nav tabs to fill 100% of the width..
+  
+<div class="container display-b">
+    <nav class="fixed display-b" role="navigation">
+      <ul class="col100" style="padding-left: 0px;">
+        <li class="col18 display-ib text-center"><a href="index.html/#aboutUs">About Us</a></li>
+        <li class="col18 display-ib text-center"><a href="jsExercises.html">The Team</a></li>
+        <li class="col18 display-ib text-center"><a href="fantasyFootball.html">Our Services</a></li>
+        <li class="col18 display-ib text-center"><a href="#portfolio">Portfolio</a></li>
+        <li class="col18 display-ib text-center"><a href="#contactUs">Contact Us</a></li>
+      </ul> 
+    </nav>
+</div>
+
+
+<div class="spacer"></div>
+-->
+<div class="container" style="height: 5000px;">
+    <div class="landing-pic" style="display: inline-block; z-index: 1; position: relative;">landing-pic
+       <!-- <img src="derekPlusMedia/page6-printing-plus-sign.png" class="logo-center"/> -->
+    </div>
+
+    <div id="aboutUs" class="about-div">about-div</div>
+
+    <div class="pic-section1">pic-section1</div>
+
+    <div class="the-team">the-team</div>
+
+    <div class="pic-section2">pic-section2</div>
+
+    <div class="our-services">our-services</div>  
+
+    <div class="pic-section3">pic-section3</div>      
+    
+    <div id="contactUs" class="contact-us">contactUs</div>  
+
+    <div class="class-tester1">
+        <h1 class="class-tester2"></h1>
+    </div>
+
+</div>
+
+</body>
+
+
+</html>	

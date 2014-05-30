@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, minimal-ui">
+	<link rel="stylesheet" href="animate.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<script>
+
+$(document).ready(function() {
+   
+   $("#quadLogos").fadeIn(3000);
+   $("#mWilbrink").fadeIn(4500);
+ /*  $("#quadLogos").css("display","inline-block"); */
+
+
+/* Fade in during scroll script from http://jsfiddle.net/tcloninger/e5qaD/*/
+
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+				$('#yourElement').addClass('animated fadeIn bounceInLeft');
+          /*     $(this).animate({'opacity':'1'},5000); */ 
+
+                    
+            }
+            
+        }); 
+    
+    });
+    
+});
+
+</script>
+
+<style>
+
+.hideme
+{
+    opacity:0;
+}
+
+#quadLogos {
+	display: none;
+}
+
+#mWilbrink {
+	display: none;
+}
+
+</style>
+
+
+<body>
+
+<h1 id="quadLogos">Check</h1>
+<div style="width: 100%; height: 750px; background-color: blue;" id="mWilbrink"></div>
+<br>
+<p class="animated bounceInUp">Hello here</p>
+<h2 class="hideme" id="yourElement">Is it workin?</h2>
+
+</body>
+
+</html>
