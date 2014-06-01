@@ -31,8 +31,8 @@
 
 init = function() {
     var jarallax = new Jarallax();
-        jarallax.addAnimation('.landing-pic, .pic-section1',[{progress:'0%', top:'90%'},{progress:'100%', top:'0%'}]);
-        jarallax.addAnimation('.about-div, .pic-section1',[{progress:'0%', top:'70%'},{progress:'30%', top:'0%'}]);
+        jarallax.addAnimation('.odds',[{progress:'0%', top:'30%'},{progress:'70%', top:'100%'}]);
+        jarallax.addAnimation('.evens',[{progress:'0%', top:'70%'},{progress:'30%', top:'100%'}]);
  /*       jarallax.addAnimation('.landing-pic, .pic-section1',[{progress:'0%', top:'100%'},{progress:'100%', top:'0%'}]); */
 
 }
@@ -148,7 +148,7 @@ width: 100%;
 .about-div {
     position: relative;
     width: 100%;
-    margin-top: 200px;
+/*  margin-top: 200px; */
     height: 400px;
     background-color: #C2FFFF;
     -webkit-box-shadow: 0px 0px 46px 15px rgba(0,0,0,0.75);
@@ -159,47 +159,71 @@ width: 100%;
 .pic-section1 {
     background-image:url('../mediaTryOut/skulls.png');
     display: block;
-    margin-top: 600px;
+/*  margin-top: 600px; */
     width: 100%;
     height: 400px;
-    background-color: #FFCC66;
-    z-index: -1;  
+    background-image:url('../mediaTryOut/skulls.png');
 }
 
 .the-team {
     width: 100%;
     height: 400px;
-    background-color: #99FF33;   
+    background-color: #99FF33;
+    -webkit-box-shadow: 0px 0px 46px 15px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 46px 15px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 46px 15px rgba(0,0,0,0.75);
 }
 
 .pic-section2 {
     display: block;
     width: 100%;
     height: 400px;
-    background-color: #FFCC66;   
+    background-image:url('../mediaTryOut/skulls.png');
 }
 
 .our-services {
     width: 100%;
     height: 400px;
-    background-color: #FF99FF;   
+    background-color: #FF99FF;
+    -webkit-box-shadow: 0px 0px 46px 15px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 46px 15px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 46px 15px rgba(0,0,0,0.75);   
 }
 
 .pic-section3 {
     display: block;
     width: 100%;
     height: 400px;
-    background-color: #FFCC66;   
+    background-image:url('../mediaTryOut/skulls.png');
 }
 
 .contact-us {
     width: 100%;
     height: 400px;
-    background-color: #66CCFF;   
+    background-color: #66CCFF;
+    margin-top: 700px;
+    -webkit-box-shadow: 0px 0px 46px 15px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 46px 15px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 46px 15px rgba(0,0,0,0.75);   
 }
 
+/*
 .pos-fixed {
     position: fixed;
+}
+*/
+
+.odds {
+    z-index: -1;
+    position: absolute;
+    display: block;
+}
+
+.evens {
+    top: 0;
+    z-index: 0;
+    position: absolute;
+    display: block;
 }
 
 </style>
@@ -229,28 +253,44 @@ width: 100%;
 
 <div class="spacer"></div>
 -->
+
+
+
+
 <div class="container" style="height: 5000px;">
-    <div class="landing-pic" style="display: inline-block; z-index: 1; position: relative;">landing-pic
+
+
+    
+
+<div class="odds">
+    <div class="landing-pic odds">landing-pic
        <!-- <img src="derekPlusMedia/page6-printing-plus-sign.png" class="logo-center"/> -->
     </div>
 
-    <div id="aboutUs" class="about-div">about-div</div>
+    <div class="pic-section1 odds">pic-section1</div>
 
-    <div class="pic-section1">pic-section1</div>
+    <div class="pic-section2 odds">pic-section2</div>
 
-    <div class="the-team">the-team</div>
+    <div class="pic-section3 odds">pic-section3</div>      
+</div>
 
-    <div class="pic-section2">pic-section2</div>
 
-    <div class="our-services">our-services</div>  
 
-    <div class="pic-section3">pic-section3</div>      
+<!-- <div class="evens"> -->
+    <div id="aboutUs evens" class="about-div">about-div</div>
+
+    <div class="the-team evens">the-team</div>
     
-    <div id="contactUs" class="contact-us">contactUs</div>  
+    <div class="our-services evens">our-services</div>
+   
+    <div id="contactUs" class="contact-us evens">contactUs</div>  
+<!--</div>
+
 
     <div class="class-tester1">
         <h1 class="class-tester2"></h1>
     </div>
+-->
 
 </div>
 

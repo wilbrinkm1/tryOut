@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+<title>Trying code from http://abduzeedo.com/super-easy-parallax-effect-jquery</title>
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300|Inika' rel='stylesheet' type='text/css'>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<script>
+
+$(document).ready(function() {
+	$("#container").scroll(function() {
+		var s = $("#container").scrollTop();
+		$("#under").css("-webkit-transform","translateY("+(s/3)+"px)");
+	/*	$("#ourTeam").css("-webkit-transform","translateY("+(s/3)+"px)"); */
+
+	})
+})
+
+
+</script>
+
+
+<style>
+
+@media (min-width: 320px) {
+  .container {
+    width: 320px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (min-width: 992px) {
+  #container {
+    width: 992px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #container {
+    width: 1024px;
+    height: 1546px;
+  }
+}
+
+
+@media (min-width: 1280px) {
+  #container {
+    width: 1280px;
+    height: 1600px;
+  }
+}
+
+body {
+    background-image:url('../mediaTryOut/skulls.png');
+    padding: 0;
+    margin: 0;
+	font-family: 'Alegreya Sans', serif;
+}
+
+#container {
+/*  width: px;
+	height: 450px; 
+	margin: 30; */
+	background: green;
+	overflow: scroll;;
+	font-weight: 300;
+/*	box-shadow: 0 1px 6px rgba(0,0,0,.2);
+	border-radius: 4px; */
+	position: relative;
+	line-height: 130%;
+}
+
+#under {
+	position: absolute;
+	top: 0px;
+	width: inherit;
+	height: inherit;
+}
+
+#over {
+	position: relative;
+}
+
+/*
+#landingPic {
+/*	position: absolute; 
+	width: 100%;
+	height: 400px;
+	top: 0;
+}
+*/
+
+.pic-section {
+	margin-bottom: 100px;
+	width: 100%;
+	height: 400px;
+}
+
+.blurb-section {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+
+}
+
+
+.about-us {
+	margin-top: 400px;	
+/*	width: 100%; */
+	height: 400px;
+	background-color: #C2FFFF;
+    -webkit-box-shadow: 0px 0px 46px 45px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 46px 45px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 46px 45px rgba(0,0,0,0.75);
+
+}
+/*
+#aboutUs {
+	position: relative; 
+	width: 100%;
+	height: 400px;
+	margin-top: 25%;*/
+/*	padding: 20px; 
+}
+*/
+
+#ourTeam {
+	position: absolute;
+	width: 100%;
+	height: 25%;
+	margin-top: 50%;
+    background-image:url('../mediaTryOut/old_map.png');
+    background-repeat: repeat;
+}
+
+/*
+#services {
+	position: relative;
+	margin-top: 75%;
+}
+*/
+#container div h2 {
+	padding: 0;
+	margin: 0;
+}
+
+.z1 {
+	z-index: 1;
+
+}
+
+.z2 {
+	z-index: 2;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<div id="container">
+
+	<div id="under" class="z1">
+		<img src="../mediaTryOut/red-mountain.jpg" class="pic-section"/>
+		<img src="../mediaTryOut/red-mountain.jpg" class="pic-section"/>
+		<img src="../mediaTryOut/red-mountain.jpg" class="pic-section"/>
+		<img src="../mediaTryOut/red-mountain.jpg" class="pic-section"/>		
+		
+<!--	<div id="ourTeam" style="color: white;">
+			<h2>Our Team</h2>
+			<p> Lorem ipsum dolor sit amet, at partiendo voluptaria per, nam an quis facilisi. Vel ne quod elitr tibique, modus movet antiopam at qui, no mei nemore labitur eleifend. Vim at alienum menandri, ad inani fierent noluisse mel. An sit causae torquatos, autem singulis definitiones in vim, duo simul viderer voluptaria ne.
+			</p>
+		</div> -->
+	</div>
+
+	<div id="over" class="z2">
+		<div class="about-us blurb-section">
+			<h2>About Us</h2>
+			<p> Lorem ipsum dolor sit amet, at partiendo voluptaria per, nam an quis facilisi. Vel ne quod elitr tibique, modus movet antiopam at qui, no mei nemore labitur eleifend. Vim at alienum menandri, ad inani fierent noluisse mel. An sit causae torquatos, autem singulis definitiones in vim, duo simul viderer voluptaria ne.
+			</p>
+		</div>
+		<div class="about-us">
+			<h2>About Us 2</h2>
+			<p> Lorem ipsum dolor sit amet, at partiendo voluptaria per, nam an quis facilisi. Vel ne quod elitr tibique, modus movet antiopam at qui, no mei nemore labitur eleifend. Vim at alienum menandri, ad inani fierent noluisse mel. An sit causae torquatos, autem singulis definitiones in vim, duo simul viderer voluptaria ne.
+			</p>
+		</div>
+	</div>
+<!--	<div style="height: 1000px; display: block; background-color: blue;"></div> -->
+	
+</div>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+

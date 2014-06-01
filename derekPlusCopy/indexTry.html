@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width">
+
+
+
+<!--        <script src="derekPlusJS/jquery.scrolling-parallax.js"></script>
+        <script src="https://code.jquery.com/jquery.js"></script>
+
+ <link rel="stylesheet" type="text/css" href="../michelExerciseWebsite/styles/bootstrapJustContainerMediaQuery.css"> 
+ <link rel="stylesheet" type="text/css" href="../michelExerciseWebsite/styles/navbar.css"> -->
+
+
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300|Inika' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<script>
+
+$(document).ready(function() {
+    $("#container").scroll(function() {
+        var s = $("#container").scrollTop();
+        $("#under").css("-webkit-transform","translateY("+(s/2)+"px)");
+     /*   $("#over").css("-webkit-transform","translateY("+(s/2)+"px)"); */
+
+    })
+})
+
+</script>
+
+
+<style>
+
+@media (min-width: 768px) {
+  .nav-container {
+    width: 768px;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav-container {
+    width: 992px;
+  }
+}
+
+
+@media (min-width: 1280px) {
+  #container {
+    width: 1280px;
+    height: 1000px; 
+
+  }
+}
+  .nav-container {
+    width: 1280px;
+  }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: 16px;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+
+
+#container {
+/*  width: px;
+    height: 450px; 
+    margin: 30; */
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    background: green;
+    overflow: scroll;;
+    font-weight: 300;
+/*  box-shadow: 0 1px 6px rgba(0,0,0,.2);
+    border-radius: 4px; */
+    position: relative;
+/*   line-height: 130%; */
+}
+
+#under {
+    position: absolute;
+    top: 0px;
+    width: inherit;
+    height: inherit;
+}
+
+#over {
+    position: relative;
+/*    width: inherit;
+    height: inherit; */
+}
+
+.fixed {
+    z-index: 3;
+    background-color: white;
+    position: fixed;
+    height: 50px;
+    box-shadow: 0px 15px 40px #222;
+    width: 100%;
+    -webkit-box-shadow: 0px 15px 40px #222;
+    -moz-box-shadow: 0px 15px 40px #222;
+    }
+
+.pic-section {
+/*    margin-bottom: 100px; */
+    width: 100%;
+    height: 600px;
+    display: block;
+}
+
+.blurb-section {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 500px;
+    -webkit-box-shadow: 0px 0px 46px 20px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 46px 20px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 46px 20px rgba(0,0,0,0.75);
+    font-family: 'Alegreya Sans', sans-serif;
+
+}
+
+.building-pic {
+    width: 100%;
+    margin-top: 50px ;
+}
+
+.about-us {
+    width: 100%;
+    margin-top: 550px;  
+/*  width: 100%; 
+    height: 400px;*/
+    background-color: #C2FFFF;
+    
+
+}
+
+.printer-pic {
+    margin-top: 0px;
+}
+
+.the-team {
+/*  width: 100%;
+    height: 400px; */
+    margin-top: 500px; 
+    background-color: #99FF33;   
+}
+
+.shop-pic {
+    margin-top: 0px;
+}
+
+.our-services {
+/*    width: 100%; 
+    height: 400px; */
+    margin-top: 500px;
+    background-color: #FF99FF;   
+}
+
+.computer-pic {
+    margin-top: 0px;
+}
+
+.contact-us {
+ /*   width: 100%;
+    height: 400px; */    
+    margin-top: 500px;
+    background-color: #66CCFF;   
+}
+
+.z1 {
+    z-index: 1;
+
+}
+
+.z2 {
+    z-index: 2;
+}
+
+
+.pic-spacer {
+    display: block;
+    width: 90%;
+    height: 200px;
+}
+
+.col18 {
+    width: 18%;
+}
+
+
+.col20 {
+    width: 20%;
+}
+
+.col100 {
+    width: 100%;
+}
+
+.class-tester1 {
+    width: 300px;
+    display: block;
+    background-color: blue;
+    min-height: 100px;
+}
+
+.display-b {
+    display: block;
+}
+
+.display-ib {
+    display: inline-block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.logo-center{
+/*    display: block; */
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+}
+
+.nav-spacer {
+    display: block;
+    height: 50px;
+    width: 100%;
+}
+</style>
+
+</head>
+<body>
+
+
+
+<div id="container">
+    <div class="nav-container display-b">
+        <nav class="fixed display-b" role="navigation">
+          <ul class="col100" style="padding-left: 0px;">
+            <li class="col18 display-ib text-center"><a href="indexTry.html/#about-us">About Us</a></li>
+            <li class="col18 display-ib text-center"><a href="jsExercises.html">The Team</a></li>
+            <li class="col18 display-ib text-center"><a href="fantasyFootball.html">Our Services</a></li>
+            <li class="col18 display-ib text-center"><a href="#portfolio">Portfolio</a></li>
+            <li class="col18 display-ib text-center"><a href="#contactUs">Contact Us</a></li>
+          </ul> 
+        </nav>
+    </div>
+    <div class="nav-spacer"></div>
+
+    <div id="under" class="z1">
+        <img src="derekPlusMedia/store-front.jpg" class="pic-section building-pic"/>
+        <img src="derekPlusMedia/printer1.jpg" class="printer-pic pic-section"/>
+        <img src="derekPlusMedia/old-print-shop.jpg" class="shop-pic pic-section"/>
+        <img src="derekPlusMedia/iMacs.jpg" class="computer-pic pic-section"/>
+    </div>
+
+    <div id="over" class="z2">
+        <div id="aboutUs" class="about-us blurb-section" style="width: 100%; margin-left: 0px; margin-right: 0px;">
+            <h2>About Us</h2>
+            <p> Lorem ipsum dolor sit amet, at partiendo voluptaria per, nam an quis facilisi. Vel ne quod elitr tibique, modus movet antiopam at qui, no mei nemore labitur eleifend. Vim at alienum menandri, ad inani fierent noluisse mel. An sit causae torquatos, autem singulis definitiones in vim, duo simul viderer voluptaria ne.
+            </p>
+        </div>
+        <div class="the-team blurb-section">
+            <h2>The Team</h2>
+            <p> Lorem ipsum dolor sit amet, at partiendo voluptaria per, nam an quis facilisi. Vel ne quod elitr tibique, modus movet antiopam at qui, no mei nemore labitur eleifend. Vim at alienum menandri, ad inani fierent noluisse mel. An sit causae torquatos, autem singulis definitiones in vim, duo simul viderer voluptaria ne.
+            </p>
+        </div>
+        <div class="our-services blurb-section">
+            <h2>Our Services</h2>
+            <p> Lorem ipsum dolor sit amet, at partiendo voluptaria per, nam an quis facilisi. Vel ne quod elitr tibique, modus movet antiopam at qui, no mei nemore labitur eleifend. Vim at alienum menandri, ad inani fierent noluisse mel. An sit causae torquatos, autem singulis definitiones in vim, duo simul viderer voluptaria ne.
+            </p>
+        </div>
+        <div class="contact-us blurb-section">
+            <h2>Contact Us</h2>
+            <p> Lorem ipsum dolor sit amet, at partiendo voluptaria per, nam an quis facilisi. Vel ne quod elitr tibique, modus movet antiopam at qui, no mei nemore labitur eleifend. Vim at alienum menandri, ad inani fierent noluisse mel. An sit causae torquatos, autem singulis definitiones in vim, duo simul viderer voluptaria ne.
+            </p>
+        </div>
+    </div>
+</div>
+
+</body>
+
+
+</html>	
